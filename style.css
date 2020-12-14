@@ -9,6 +9,7 @@
 
 h2{
     font-size: 20px;
+
 }
 header{
     z-index: 3;
@@ -21,25 +22,14 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom:  3px   rgb(114, 114, 114) solid;
 }
 
-.progress_container {
-    position: fixed;
-    width: 0%;
-    height: 5px;
-    background: #ccc;
-    z-index: 3;
-}
 
-.pogress_bar {
-    height: 5px;
-    background: red;
-    width: 0%;
-    z-index: 10;
-}
 
 .header_menu{
     display: flex;
+
     position: sticky;
     top: 0px;
 }
@@ -50,11 +40,26 @@ header{
 }
 
 .header_menu a{
+    color: rgb(94, 94, 94);
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
     font-weight: bold;
 }
+
+
+.burger_menu {
+    display: none;
+}
+
+.burger_menu div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgb(114, 114, 114);
+    transition: all 0.3s ease;
+}
+
 
 .wrapper {
     min-height: 100%;
@@ -78,6 +83,93 @@ header{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.index_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.item {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    flex-basis: 25%;
+    transition: all 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    background-image: url(https://daks2k3a4ib2z.cloudfront.net/54c9bf9111623c837b0e76a5/54cc7adc537ce6885437f11a_Magic-Lantern.jpg);
+}
+
+.item:hover{
+    flex-basis: 50%;
+}
+
+.item a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: black 0 0 3px;
+}
+
+.card {
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 50%;
+}
+
+.cards{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+}
+
+.card img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+
+}
+
+
+.card_content{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.card_image{
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    max-width: 400px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.card_title{
+    font-weight: 300;
+    font-size: 22px;
+}
+
+/* .card_content p {
+    flex: 1 1 auto;
+    font-size: 12px;
+    line-height: 1.5;
+} */
 .welcome_container{
     background-image: url(https://daks2k3a4ib2z.cloudfront.net/54c9bf9111623c837b0e76a5/54cc7adc537ce6885437f11a_Magic-Lantern.jpg);
     background-position: 0%, 0%, 0%, 0% ;
@@ -87,9 +179,9 @@ header{
     text-align: center;
     max-width: 100%;
     background-repeat: no-repeat;
-background-position: center center;
-background-attachment: fixed;
-background-size: cover; 
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; 
 }
 
 .welcome_container h1{
@@ -97,6 +189,7 @@ background-size: cover;
     font-size: 55px;
     text-transform: uppercase;
     font-weight: 400;
+    text-shadow: black 0 0 3px;
 }
 
 
@@ -107,7 +200,7 @@ background-size: cover;
 }
 
 .text{
-    padding: 70px 0;
+    padding: 40px 0;
     font-size: 18px;
     line-height: 25px;
 }
@@ -174,6 +267,7 @@ background-size: cover;
       background-attachment: fixed;
       background-color: black;
       padding: 0 ;
+      max-width: 100%;
   }
 
   .gifs{
@@ -201,134 +295,207 @@ background-size: cover;
       font-size: 20px;
   }
 
-  .fullimg_container{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover; 
-}
-
 .img_text {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 30px;
 }
 
-
-
-
-  @media screen and (max-width: 900px) {
-      .text_img{
-          max-width: 300px;
-      }
-      .img_text img {
-          max-width: 300px;
-      }
-      .welcome_container h1{
-          margin-right: 20px;
-      }
-      p {
-          text-align: left;
-      }
-  }
-
-.sim-slider img {
-    width: 100%;
-}
-  
-  .sim-slider {
-    max-width: 1000px;
-    min-width: 320px;
-    margin: 20px auto;
-    padding: 30px 50px;
-    background-color: white;
-  }
-  
-  /* General styles */
-  .sim-slider {
-    position: relative;
-  }
-  
-  .sim-slider-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    position: relative;
-  }
-  
-  .sim-slider-element {
-    width: 100%;
-    transition: opacity 1s ease-in;
-    opacity: 0;
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    display: block;
-  }
-  .sim-slider-element img {
-      height: 50%;
-  }
-  
-  /* Navigation item styles */
-  div.sim-slider-arrow-left,
-  div.sim-slider-arrow-right {
-    width: 22px;
-    height: 40px;
-    position: absolute;
-    cursor: pointer;
-    opacity: 0.6;
-    z-index: 4;
-  }
-  
-  div.sim-slider-arrow-left {
-    left: 10px;
-    top: 40%;
-    display: block;
-    background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
-  }
-  
-  div.sim-slider-arrow-right {
-    right: 10px;
-    top: 40%;
-    display: block;
-    background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
-  }
-  
-  div.sim-slider-arrow-left:hover {
-    opacity: 1.0;
-  }
-  
-  div.sim-slider-arrow-right:hover {
-    opacity: 1.0;
-  }
-  
-  div.sim-slider-dots {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 3;
+.img_text_app {
+    flex: 2 0 0%;
+    margin: auto 10px;
     text-align: center;
-  }
-  
-  .sim-slider-element p{
-      text-align: center;
-  }
-  span.sim-dot {
-    width: 10px;
-    height: 10px;
-    margin: 5px 7px;
-    padding: 0;
-    display: inline-block;
-    background-color: #BBB;
-    border-radius: 5px;
+}
+
+.img_img {
+    flex: auto;
+}
+
+/* .image_container img {
+    vertical-align: top;
+    max-width:  800px;
+    max-height: 500px   ;
+} */
+
+
+.image_container{
+    max-width: 100%;
+    flex-direction: row;
+    margin: auto 0 ;
+    display: flex;
+}
+
+.footer{
+    background-color: lightgray;
+    text-align: center;
+    min-height: 5vh;
+    vertical-align: bottom;
+    position: relative;
+}
+
+.footer p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.slider{
+    max-width: 60%;
+    position: relative;
+    margin: auto;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.item img{
+    width: 600px;
+    height: 400px;
+}
+
+.slider .previous, .slider .next {
+
     cursor: pointer;
-  }
+
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+
+    transition: 0.6s ease;
+
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.cards_animation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cards_animation .card {
+    width: 320px;
+
+}
+
+.cards_animation .card .box{
+    width: 100%;
+    height: 100%;
+}
+
+.cards_animation .card .box .image {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .header_menu {
+        position: absolute;
+        z-index: 2;
+        right: 0px;
+        top: 8vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .active{
+        transform: translateX(0%);
+    }
+
+    .header_menu li {
+        margin: 5px;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .index_card{
+        height: 60vh;
+        flex-flow: column;
+    }
+    .item{
+        width: 100%;
+    }
+    .text_img{
+        max-width: 100%;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .img {
+        display: block;
+    } 
+    .welcome_container h1{
+        margin-right: 20px;
+    }
+    p {
+        text-align: left;
+    }
+    .image_item {
+      margin: 0px 0px 10px 30px;
+    }
+    
+    .cards{
+        flex-direction: column;
+    }
+    .card {
+        max-width: 100%;
+    }
+    .slider{
+        max-width: 300px;
+        max-height: 200px;
+    }
+    .slider img{
+        width: 300px;
+        height: 200px;
+    }
+    .burger_menu {
+        display: block;
+    }
+
+
+}
