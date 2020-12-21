@@ -9,22 +9,22 @@
 
 h2{
     font-size: 20px;
-
+    color: #107896;
 }
+
 header{
     z-index: 3;
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
     left: 0px;
-    background-color: white;
+    background-color: #107896;
     min-height: 8vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom:  3px   rgb(114, 114, 114) solid;
+    border-bottom:  3px   rgba(16, 120, 150) solid;
 }
-
 
 
 .header_menu{
@@ -40,11 +40,12 @@ header{
 }
 
 .header_menu a{
-    color: rgb(94, 94, 94);
+    color:white;
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
     font-weight: bold;
+    text-shadow:  black 0 0 3px;
 }
 
 
@@ -56,7 +57,7 @@ header{
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: rgb(114, 114, 114);
+    background-color:white;
     transition: all 0.3s ease;
 }
 
@@ -69,7 +70,6 @@ header{
 .page {
     position: relative;
     z-index: 2;
-    background-color: white;
 }
 
 ._container {
@@ -79,9 +79,6 @@ header{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .index_card {
@@ -92,8 +89,8 @@ header{
     margin-bottom: 25px;
 }
 
-.item {
-    height: 65vh;
+.item_card {
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,14 +101,14 @@ header{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; 
-    background-image: url(https://daks2k3a4ib2z.cloudfront.net/54c9bf9111623c837b0e76a5/54cc7adc537ce6885437f11a_Magic-Lantern.jpg);
+    /* */
 }
 
-.item:hover{
+.item_card:hover{
     flex-basis: 50%;
 }
 
-.item a{
+.item_card a{
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -120,7 +117,6 @@ header{
 }
 
 .card {
-    background: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -129,6 +125,7 @@ header{
 }
 
 .cards{
+    background-color: white;
     display: flex;
     padding: 5px;
     margin: 5px;
@@ -138,7 +135,6 @@ header{
     height: auto;
     max-width: 100%;
     vertical-align: middle;
-
 }
 
 
@@ -195,22 +191,26 @@ header{
 
 .text_title{
     font-size: 35px;
-    margin: 20px 20px 20px 0px;
-    white-space: nowrap;
+    margin: 20px 20px 20px 0px; 
+    line-height: 1.1;
 }
 
 .text{
-    padding: 40px 0;
+    padding: 20px 0;
     font-size: 18px;
     line-height: 25px;
 }
 
 .text_item{
+    background-color: aliceblue;
     margin: 0px 0px 25px 0px;
     text-align: justify;
+    padding: 10px;
+    border: 1px solid #107896;
 }
 
 .text_img{
+    border: 2px solid #107896;
     float: right;
     margin: 0px 20px 20px 20px ;
     position: relative;
@@ -221,7 +221,7 @@ header{
 }
 .images{
     background-color: black;
-    padding: 70px 0;
+    padding: 30px 0;
 }
 
 .list_images{
@@ -327,7 +327,7 @@ header{
 }
 
 .footer{
-    background-color: lightgray;
+    background-color: #107896;
     text-align: center;
     min-height: 5vh;
     vertical-align: bottom;
@@ -356,21 +356,18 @@ header{
 .slider .previous, .slider .next {
 
     cursor: pointer;
-
+    color: white;
     position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
-
-    color: black;
     font-weight: bold;
     font-size: 16px;
-
     transition: 0.6s ease;
-
     border-radius: 0 3px 3px 0;
 }
+
 .slider .next {
     right: 0;
     border-radius: 3px 0 0 3px;
@@ -421,43 +418,11 @@ header{
 
 
 @media screen and (max-width: 900px) {
-    .header_menu {
-        position: absolute;
-        z-index: 2;
-        right: 0px;
-        top: 8vh;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-
-    .active{
-        transform: translateX(0%);
-    }
-
-    .header_menu li {
-        margin: 5px;
-    }
-
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .toggle .line2 {
-        opacity: 0;
-    }
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
     .index_card{
         height: 60vh;
         flex-flow: column;
     }
-    .item{
+    .item_card{
         width: 100%;
     }
     .text_img{
@@ -496,6 +461,35 @@ header{
     .burger_menu {
         display: block;
     }
+    .header_menu {
+        position: absolute;
+        z-index: 2;
+        right: 0px;
+        top: 8vh;
+        background-color: #107896;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+ 
+    .active{
+        transform: translateX(0%);
+    }
 
+    .header_menu li {
+        margin: 5px;
+    }
 
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
